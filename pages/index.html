@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Advising System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+     <!-- Header -->
+     <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Course Advising System</h1>
+            <nav class="hidden md:flex space-x-4">
+                <a href="#" class="text-gray-900 hover:text-blue-600 font-bold py-2 px-4">Home</a>
+                <a href="#" class="text-gray-900 hover:text-blue-600 font-bold py-2 px-4">About</a>
+                <a href="login.php" class="text-gray-900 hover:text-blue-600 font-bold py-2 px-4">Login</a>
+                <a href="signup.php" class="text-gray-900 hover:text-blue-600 font-bold py-2 px-4">Sign Up</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block px-4 py-2 text-gray-900 hover:text-blue-600 font-bold">Home</a>
+            <a href="#" class="block px-4 py-2 text-gray-900 hover:text-blue-600 font-bold">About</a>
+            <a href="login.php" class="block px-4 py-2 text-gray-900 hover:text-blue-600 font-bold">Login</a>
+            <a href="signup.php" class="block px-4 py-2 text-gray-900 hover:text-blue-600 font-bold">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Main Content with Icons/Illustrations -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+            <!-- Student Advising -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="assets/img/icon-student.png" alt="Student Icon" class="mx-auto h-24 w-24">
+                <h3 class="mt-6 text-lg font-semibold text-gray-900">Student Advising</h3>
+                <p class="mt-2 text-gray-600">Get guidance on course selection and track your academic progress.</p>
+            </div>
+    
+            <!-- Teacher Advising -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="assets/img/icon-teacher.png" alt="Teacher Icon" class="mx-auto h-24 w-24">
+                <h3 class="mt-6 text-lg font-semibold text-gray-900">Teacher Advising</h3>
+                <p class="mt-2 text-gray-600">Manage your advised students and course loads efficiently.</p>
+            </div>
+    
+            <!-- Manager Control -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src="assets/img/icon-manager.png" alt="Manager Icon" class="mx-auto h-24 w-24">
+                <h3 class="mt-6 text-lg font-semibold text-gray-900">Manager Control</h3>
+                <p class="mt-2 text-gray-600">Oversee courses, departments, and advising activities.</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Fixed Footer -->
+    <footer class="bg-white shadow mt-12">
+        <div class="max-w-7xl mx-auto px-4 py-4 text-center">
+            <p class="text-gray-600">&copy; 2024 Course Advising System | Designed with Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
